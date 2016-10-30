@@ -132,3 +132,13 @@
 	width: 0;
 	height: 0; 
 }
+
+.player_posebej{
+	width: 213px;
+	float: left;
+	    align: center;
+
+}
+.player_posebej.h1{
+    align: center;
+}

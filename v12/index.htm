@@ -41,35 +41,35 @@
 			// This code creates 2nd instance.
 			var player2_krka = new CirclePlayer("#jquery_jplayer_2",
 			{
-				m4a:"http://93.103.12.127:8000/;?icy=http"
+				oga:"http://93.103.12.127:8000/;?icy=http"
 			}, {
 				cssSelectorAncestor: "#cp_container_2"
 			});
 			// This code creates 3rd instance.
 			var player3_veseljak = new CirclePlayer("#jquery_jplayer_3",
 			{
-				m4a:"http://195.95.158.131/Veseljak"
+				oga:"http://195.95.158.131/Veseljak"
 			}, {
 				cssSelectorAncestor: "#cp_container_3"
 			});	
 			// This code creates 4th instance.
 			var player4_ena = new CirclePlayer("#jquery_jplayer_4",
 			{
-				m4a:"http://live.radio1.si/Radio1"
+				oga:"http://live.radio1.si/Radio1"
 			}, {
 				cssSelectorAncestor: "#cp_container_4"
 			});	
 			// This code creates 5th instance.
 			var player5_sloena = new CirclePlayer("#jquery_jplayer_5",
 			{
-				m4a:"http://mp3.rtvslo.si/ra1"
+				oga:"http://mp3.rtvslo.si/ra1"
 			}, {
 				cssSelectorAncestor: "#cp_container_5"
 			});			
 			// This code creates 6th instance.
 			var player6_val202 = new CirclePlayer("#jquery_jplayer_6",
 			{
-				m4a:"http://mp3.rtvslo.si/val202"
+				oga:"http://mp3.rtvslo.si/val202"
 			}, {
 				cssSelectorAncestor: "#cp_container_6"
 			});				
@@ -94,120 +94,132 @@
 		<!-- This is the 2nd instance's jPlayer div -->
 		<div id="jquery_jplayer_6" class="cp-jplayer"></div>		
 
+		<!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
 		<div class="prototype-wrapper"> <!-- A wrapper to emulate use in a webpage and center align -->
-	
-			<!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+			
 
 			<!-- This is the 1st instance HTML -->
-			<h1>Radio AKTUAL</h1>
-			<div id="cp_container_1" class="cp-container">
-
-				<div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
-					<div class="cp-buffer-1"></div>
-					<div class="cp-buffer-2"></div>
-				</div>				
-				<div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
-					<div class="cp-progress-1"></div>
-					<div class="cp-progress-2"></div>
+			<div class="player_posebej"> <!-- A wrapper to emulate use in a webpage and center align -->
+				<h1 align="center">AKTUAL</h1>
+				<div id="cp_container_1" class="cp-container">
+					<div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>				
+					<div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls">
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li> 
+						<!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+					</ul>
 				</div>
-				<div class="cp-circle-control"></div>
-				<ul class="cp-controls">
-					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
-					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li> 
-					<!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
-				</ul>
 			</div>
-
-			<!-- This is the 2nd instance HTML -->
-			<h1>Radio KRKA</h1>
-			<div id="cp_container_2" class="cp-container">
-				<div class="cp-buffer-holder">
-					<div class="cp-buffer-1"></div>
-					<div class="cp-buffer-2"></div>
+			
+			<!-- This is the 2nd instance HTML -->			
+			<div class="player_posebej"> <!-- A wrapper to emulate use in a webpage and center align -->
+				<h1 align="center">KRKA</h1>
+				<div id="cp_container_2" class="cp-container">
+					<div class="cp-buffer-holder">
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>
+					<div class="cp-progress-holder">
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls">
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+					</ul>
 				</div>
-				<div class="cp-progress-holder">
-					<div class="cp-progress-1"></div>
-					<div class="cp-progress-2"></div>
-				</div>
-				<div class="cp-circle-control"></div>
-				<ul class="cp-controls">
-					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
-					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
-				</ul>
 			</div>
 			
 			<!-- This is the 3rd instance HTML -->
-			<h1>Radio Veseljak</h1>
-			<div id="cp_container_3" class="cp-container">
-				<div class="cp-buffer-holder">
-					<div class="cp-buffer-1"></div>
-					<div class="cp-buffer-2"></div>
-				</div>
-				<div class="cp-progress-holder">
-					<div class="cp-progress-1"></div>
-					<div class="cp-progress-2"></div>
-				</div>
-				<div class="cp-circle-control"></div>
-				<ul class="cp-controls"> 
-					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
-					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
-				</ul>
+			<div class="player_posebej"> <!-- A wrapper to emulate use in a webpage and center align -->			
+				<h1 align="center">VESELJAK</h1>
+				<div id="cp_container_3" class="cp-container">
+					<div class="cp-buffer-holder">
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>
+					<div class="cp-progress-holder">
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls"> 
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+					</ul>
+				</div>	
 			</div>					
 		</div>
+		
 		<div class="prototype-wrapper"> <!-- A wrapper to emulate use in a webpage and center align -->
-			<!-- This is the 4th instance HTML -->
-			<h1>Radio ENA</h1>
-			<div id="cp_container_4" class="cp-container">
-				<div class="cp-buffer-holder">
-					<div class="cp-buffer-1"></div>
-					<div class="cp-buffer-2"></div>
+			<div class="player_posebej"> <!-- A wrapper to emulate use in a webpage and center align -->		
+				<!-- This is the 4th instance HTML -->
+				<h1 align="center">ENA</h1>
+				<div id="cp_container_4" class="cp-container">
+					<div class="cp-buffer-holder">
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>
+					<div class="cp-progress-holder">
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls">
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+					</ul>
 				</div>
-				<div class="cp-progress-holder">
-					<div class="cp-progress-1"></div>
-					<div class="cp-progress-2"></div>
-				</div>
-				<div class="cp-circle-control"></div>
-				<ul class="cp-controls">
-					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
-					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
-				</ul>
 			</div>
 
+			<div class="player_posebej"> <!-- A wrapper to emulate use in a webpage and center align -->
 			<!-- This is the 5th instance HTML -->
-			<h1>Radio SLO1</h1>
-			<div id="cp_container_5" class="cp-container">
-				<div class="cp-buffer-holder">
-					<div class="cp-buffer-1"></div>
-					<div class="cp-buffer-2"></div>
+			<h1 align="center">SLO1</h1>
+				<div id="cp_container_5" class="cp-container">
+					<div class="cp-buffer-holder">
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>
+					<div class="cp-progress-holder">
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls">
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+					</ul>
 				</div>
-				<div class="cp-progress-holder">
-					<div class="cp-progress-1"></div>
-					<div class="cp-progress-2"></div>
-				</div>
-				<div class="cp-circle-control"></div>
-				<ul class="cp-controls">
-					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
-					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
-				</ul>
 			</div>
 			
 			<!-- This is the 6th instance HTML -->
-			<h1>Radio VAL202</h1>
-			<div id="cp_container_6" class="cp-container">
-				<div class="cp-buffer-holder">
-					<div class="cp-buffer-1"></div>
-					<div class="cp-buffer-2"></div>
-				</div>
-				<div class="cp-progress-holder">
-					<div class="cp-progress-1"></div>
-					<div class="cp-progress-2"></div>
-				</div>
-				<div class="cp-circle-control"></div>
-				<ul class="cp-controls">
-					<li><a href="#" class="cp-play" tabindex="1">play</a></li>
-					<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
-				</ul>
-			</div>			
+			<div class="player_posebej"> <!-- A wrapper to emulate use in a webpage and center align -->
+				<h1 align="center">VAL202</h1>
+				<div id="cp_container_6" class="cp-container">
+					<div class="cp-buffer-holder">
+						<div class="cp-buffer-1"></div>
+						<div class="cp-buffer-2"></div>
+					</div>
+					<div class="cp-progress-holder">
+						<div class="cp-progress-1"></div>
+						<div class="cp-progress-2"></div>
+					</div>
+					<div class="cp-circle-control"></div>
+					<ul class="cp-controls">
+						<li><a href="#" class="cp-play" tabindex="1">play</a></li>
+						<li><a href="#" class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+					</ul>
+				</div>	
+			</div>
 		</div>
 	</body>
 </html>
