@@ -240,7 +240,7 @@
 			solution: "html, flash", // Valid solutions: html, flash. Order defines priority. 1st is highest,
 			supplied: "mp3", // Defines which formats jPlayer will try and support and the priority by the order. 1st is highest,
 			preload: 'metadata',  // HTML5 Spec values: none, metadata, auto.
-			volume: 0.8, // The volume. Number 0 to 1.
+			volume: 1, // The volume. Number 0 to 1.
 			muted: false,
 			wmode: "window", // Default Flash wmode is: window.  Valid wmode: transparent, opaque, direct, gpu
 			backgroundColor: "#000000", // To define the jPlayer div and Flash background color.
@@ -1233,6 +1233,7 @@
 			if(this.status.srcSet) {
 				if(this.html.active) {
 					this._html_pause(time);
+					this._html_clearMedia();
 				} else if(this.flash.active) {
 					this._flash_pause(time);
 				}
@@ -1245,7 +1246,10 @@
 			$.each(this.instances, function(i, element) {
 				if(self.element !== element) { // Do not this instance.
 					if(element.data("jPlayer").status.srcSet) { // Check that media is set otherwise would cause error event.
-						element.jPlayer("pause");
+						/* originaly, pause was here
+						    element.jPlayer("pause"); 
+						*/
+						element.jPlayer("stop");
 					}
 				}
 			});
@@ -1254,6 +1258,7 @@
 			if(this.status.srcSet) {
 				if(this.html.active) {
 					this._html_pause(0);
+					this._html_clearMedia();
 				} else if(this.flash.active) {
 					this._flash_pause(0);
 				}
@@ -1654,7 +1659,7 @@
 		_html_play: function(time) {
 			var self = this;
 			this._html_load(); // Loads if required and clears any delayed commands.
-
+	
 			this.htmlElement.media.play(); // Before currentTime attempt otherwise Firefox 4 Beta never loads.
 
 			if(!isNaN(time)) {

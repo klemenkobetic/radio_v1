@@ -231,7 +231,7 @@ CirclePlayer.prototype = {
 		this.player.jPlayer("setMedia", this.media);
 	},
 	play: function(time) {
-		this.player.jPlayer("play", time);
+		this.player.jPlayer("play", 0);
 	},
 	pause: function(time) {
 		this.player.jPlayer("pause", time);
